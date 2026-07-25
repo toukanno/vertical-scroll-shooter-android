@@ -29,18 +29,47 @@
 - タップ: 宇宙船を移動（タップした位置へ移動）
 - 弾は自動発射
 
-## 技術仕様
+## Tech Stack
 
-- 言語: Kotlin
-- 最小SDK: API 24 (Android 7.0)
-- ターゲットSDK: API 34 (Android 14)
-- カスタムSurfaceViewによる60FPSゲームループ
-- タッチ入力処理
-- 当たり判定 (RectF.intersects)
+| カテゴリ | 技術 |
+|---------|------|
+| 言語 | Kotlin |
+| プラットフォーム | Android |
+| 描画 | カスタム SurfaceView (60 FPS ゲームループ) |
+| 入力 | タッチ入力処理 |
+| 当たり判定 | `RectF.intersects` |
+| 最小SDK | API 24 (Android 7.0) |
+| ターゲットSDK | API 34 (Android 14) |
 
-## ビルド方法
+## Quick Start
+
+### 必要環境
+
+- Android Studio (Hedgehog 以降推奨)
+- JDK 17+
+- Android SDK (API 24 〜 34)
+- 実機または Android Emulator
+
+### ビルド方法
 
 ```bash
-# Android Studioで開く、またはコマンドラインから
+# Android Studio で開く、またはコマンドラインから
 ./gradlew assembleDebug
 ```
+
+ビルド成功後、`app/build/outputs/apk/debug/app-debug.apk` が生成されます。  
+Android Studio の **Run** ボタンから直接端末へインストールすることもできます。
+
+## Contributing
+
+バグ報告・機能提案・プルリクエストは歓迎です！
+
+1. このリポジトリを Fork する
+2. フィーチャーブランチを作成する (`git checkout -b feature/your-feature`)
+3. 変更をコミットする (`git commit -m 'feat: add your feature'`)
+4. ブランチをプッシュする (`git push origin feature/your-feature`)
+5. Pull Request を作成する
+
+## License
+
+このプロジェクトは [MIT License](LICENSE) のもとで公開されています。
